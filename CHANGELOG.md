@@ -20,16 +20,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add styles for `tfoot` elements ([#243](https://github.com/tailwindlabs/tailwindcss-typography/pull/243))
-- Add `prose-h5` and `prose-h6` variants ([#273](https://github.com/tailwindlabs/tailwindcss-typography/pull/273))
+- Add `format-h5` and `format-h6` variants ([#273](https://github.com/tailwindlabs/tailwindcss-typography/pull/273))
 
 ### Fixed
 
-- Fix prose elements `legacy` mode ([#259](https://github.com/tailwindlabs/tailwindcss-typography/pull/259))
+- Fix format elements `legacy` mode ([#259](https://github.com/tailwindlabs/tailwindcss-typography/pull/259))
 - Allow `lead` class to override element styles ([#260](https://github.com/tailwindlabs/tailwindcss-typography/pull/260))
-- Fix generation of `prose-headings` variant ([#264](https://github.com/tailwindlabs/tailwindcss-typography/pull/264))
+- Fix generation of `format-headings` variant ([#264](https://github.com/tailwindlabs/tailwindcss-typography/pull/264))
 - Fix `figure` spacing ([#267](https://github.com/tailwindlabs/tailwindcss-typography/pull/267))
 - Fix child combinator `:where` selectors ([#268](https://github.com/tailwindlabs/tailwindcss-typography/pull/267))
-- Fix `prose-headings` variant to include `h5` and `h6` elements ([#273](https://github.com/tailwindlabs/tailwindcss-typography/pull/273))
+- Fix `format-headings` variant to include `h5` and `h6` elements ([#273](https://github.com/tailwindlabs/tailwindcss-typography/pull/273))
 
 ## [0.5.2] - 2022-02-14
 
@@ -53,10 +53,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- Use `:where` to reduce specificity, making it possible to override prose children with utilities ([#203](https://github.com/tailwindlabs/tailwindcss-typography/pull/203))
-- Support "undoing" prose styles using the `not-prose` class on a group of child elements ([#205](https://github.com/tailwindlabs/tailwindcss-typography/pull/205))
+- Use `:where` to reduce specificity, making it possible to override format children with utilities ([#203](https://github.com/tailwindlabs/tailwindcss-typography/pull/203))
+- Support "undoing" format styles using the `not-format` class on a group of child elements ([#205](https://github.com/tailwindlabs/tailwindcss-typography/pull/205))
 - Update color palette for v3 ([#206](https://github.com/tailwindlabs/tailwindcss-typography/pull/206))
-- Improve customization API, add alternate grays, add dark mode support, use `::marker` instead of pseudo-elements, and add child element variants (eg. `prose-h1:underline`)([#216](https://github.com/tailwindlabs/tailwindcss-typography/pull/216))
+- Improve customization API, add alternate grays, add dark mode support, use `::marker` instead of pseudo-elements, and add child element variants (eg. `format-h1:underline`)([#216](https://github.com/tailwindlabs/tailwindcss-typography/pull/216))
 
 ## [0.5.0-alpha.2] - 2021-11-08
 
@@ -97,8 +97,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Added
 
-- Add new `className` option for overriding `prose` class (#28)
-- Add color modifiers by default like `prose-blue` for setting link styles (#92)
+- Add new `className` option for overriding `format` class (#28)
+- Add color modifiers by default like `format-blue` for setting link styles (#92)
 
 ## [0.2.0] - 2020-07-15
 

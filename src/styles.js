@@ -12,69 +12,72 @@ let defaultModifiers = {
   sm: {
     css: [
       {
-        fontSize: rem(14),
+        fontSize: rem(16),
         lineHeight: round(24 / 14),
         p: {
-          marginTop: em(16, 14),
-          marginBottom: em(16, 14),
+          marginTop: em(16, 16),
+          marginBottom: em(16, 16),
         },
         '[class~="lead"]': {
-          fontSize: em(18, 14),
+          fontSize: em(18, 16),
           lineHeight: round(28 / 18),
           marginTop: em(16, 18),
           marginBottom: em(16, 18),
         },
         blockquote: {
+          marginBottom: em(24, 18)
+        },
+        'blockquote::before': {
           marginTop: em(24, 18),
-          marginBottom: em(24, 18),
-          paddingLeft: em(20, 18),
         },
         h1: {
-          fontSize: em(30, 14),
+          fontSize: em(30, 18),
           marginTop: '0',
           marginBottom: em(24, 30),
           lineHeight: round(36 / 30),
         },
         h2: {
-          fontSize: em(20, 14),
-          marginTop: em(32, 20),
+          fontSize: em(24, 16),
+          marginTop: '0',
           marginBottom: em(16, 20),
           lineHeight: round(28 / 20),
         },
         h3: {
-          fontSize: em(18, 14),
-          marginTop: em(28, 18),
+          fontSize: em(20, 16),
+          marginTop: '0',
           marginBottom: em(8, 18),
           lineHeight: round(28 / 18),
         },
         h4: {
-          marginTop: em(20, 14),
-          marginBottom: em(8, 14),
-          lineHeight: round(20 / 14),
+          fontSize: em(18, 16),
+          marginTop: '0',
+          marginBottom: em(8, 16),
+          lineHeight: round(20 / 16),
         },
         img: {
-          marginTop: em(24, 14),
-          marginBottom: em(24, 14),
+          marginTop: em(24, 16),
+          marginBottom: em(24, 16),
         },
         video: {
-          marginTop: em(24, 14),
-          marginBottom: em(24, 14),
+          marginTop: em(24, 16),
+          marginBottom: em(24, 16),
         },
         figure: {
-          marginTop: em(24, 14),
-          marginBottom: em(24, 14),
+          marginTop: em(24, 16),
+          marginBottom: em(24, 16),
         },
         'figure > *': {
           marginTop: '0',
           marginBottom: '0',
         },
         figcaption: {
-          fontSize: em(12, 14),
+          fontSize: em(14, 16),
           lineHeight: round(16 / 12),
           marginTop: em(8, 12),
+          textAlign: 'center'
         },
         code: {
-          fontSize: em(12, 14),
+          fontSize: em(14, 16),
         },
         'h2 code': {
           fontSize: em(18, 20),
@@ -83,7 +86,7 @@ let defaultModifiers = {
           fontSize: em(16, 18),
         },
         pre: {
-          fontSize: em(12, 14),
+          fontSize: em(14, 16),
           lineHeight: round(20 / 12),
           marginTop: em(20, 12),
           marginBottom: em(20, 12),
@@ -94,48 +97,48 @@ let defaultModifiers = {
           paddingLeft: em(12, 12),
         },
         ol: {
-          marginTop: em(16, 14),
-          marginBottom: em(16, 14),
-          paddingLeft: em(22, 14),
+          marginTop: em(16, 16),
+          marginBottom: em(16, 16),
+          paddingLeft: em(22, 16),
         },
         ul: {
-          marginTop: em(16, 14),
-          marginBottom: em(16, 14),
-          paddingLeft: em(22, 14),
+          marginTop: em(16, 16),
+          marginBottom: em(16, 16),
+          paddingLeft: em(22, 16),
         },
         li: {
-          marginTop: em(4, 14),
-          marginBottom: em(4, 14),
+          marginTop: em(4, 16),
+          marginBottom: em(4, 16),
         },
         'ol > li': {
-          paddingLeft: em(6, 14),
+          paddingLeft: em(6, 16),
         },
         'ul > li': {
-          paddingLeft: em(6, 14),
+          paddingLeft: em(6, 16),
         },
         '> ul > li p': {
-          marginTop: em(8, 14),
-          marginBottom: em(8, 14),
+          marginTop: em(8, 16),
+          marginBottom: em(8, 16),
         },
         '> ul > li > *:first-child': {
-          marginTop: em(16, 14),
+          marginTop: em(16, 16),
         },
         '> ul > li > *:last-child': {
-          marginBottom: em(16, 14),
+          marginBottom: em(16, 16),
         },
         '> ol > li > *:first-child': {
-          marginTop: em(16, 14),
+          marginTop: em(16, 16),
         },
         '> ol > li > *:last-child': {
-          marginBottom: em(16, 14),
+          marginBottom: em(16, 16),
         },
         'ul ul, ul ol, ol ul, ol ol': {
-          marginTop: em(8, 14),
-          marginBottom: em(8, 14),
+          marginTop: em(8, 16),
+          marginBottom: em(8, 16),
         },
         hr: {
-          marginTop: em(40, 14),
-          marginBottom: em(40, 14),
+          marginTop: em(40, 16),
+          marginBottom: em(40, 16),
         },
         'hr + *': {
           marginTop: '0',
@@ -150,7 +153,7 @@ let defaultModifiers = {
           marginTop: '0',
         },
         table: {
-          fontSize: em(12, 14),
+          fontSize: em(14, 16),
           lineHeight: round(18 / 12),
         },
         'thead th': {
@@ -203,9 +206,13 @@ let defaultModifiers = {
           marginBottom: em(24, 20),
         },
         blockquote: {
+          marginBottom: em(32, 20)
+        },
+        'blockquote::before': {
           marginTop: em(32, 20),
-          marginBottom: em(32, 20),
-          paddingLeft: em(20, 20),
+        },
+        'blockquote > p:first-child': {
+          marginTop: '0'
         },
         h1: {
           fontSize: em(36, 16),
@@ -215,18 +222,18 @@ let defaultModifiers = {
         },
         h2: {
           fontSize: em(24, 16),
-          marginTop: em(48, 24),
+          marginTop: '0',
           marginBottom: em(24, 24),
           lineHeight: round(32 / 24),
         },
         h3: {
           fontSize: em(20, 16),
-          marginTop: em(32, 20),
+          marginTop: '0',
           marginBottom: em(12, 20),
           lineHeight: round(32 / 20),
         },
         h4: {
-          marginTop: em(24, 16),
+          marginTop: '0',
           marginBottom: em(8, 16),
           lineHeight: round(24 / 16),
         },
@@ -336,9 +343,6 @@ let defaultModifiers = {
           paddingBottom: em(8, 14),
           paddingLeft: em(8, 14),
         },
-        'thead th:first-child': {
-          paddingLeft: '0',
-        },
         'thead th:last-child': {
           paddingRight: '0',
         },
@@ -347,9 +351,6 @@ let defaultModifiers = {
           paddingRight: em(8, 14),
           paddingBottom: em(8, 14),
           paddingLeft: em(8, 14),
-        },
-        'tbody td:first-child, tfoot td:first-child': {
-          paddingLeft: '0',
         },
         'tbody td:last-child, tfoot td:last-child': {
           paddingRight: '0',
@@ -380,10 +381,11 @@ let defaultModifiers = {
           marginTop: em(24, 22),
           marginBottom: em(24, 22),
         },
-        blockquote: {
+        'blockquote::before': {
           marginTop: em(40, 24),
-          marginBottom: em(40, 24),
-          paddingLeft: em(24, 24),
+        },
+        'blockquote > p:first-child': {
+          marginTop:  em(12, 24)
         },
         h1: {
           fontSize: em(48, 18),
@@ -392,19 +394,19 @@ let defaultModifiers = {
           lineHeight: round(48 / 48),
         },
         h2: {
-          fontSize: em(30, 18),
-          marginTop: em(56, 30),
-          marginBottom: em(32, 30),
+          fontSize: em(36, 18),
+          marginTop: '0',
+          marginBottom: em(20, 30),
           lineHeight: round(40 / 30),
         },
         h3: {
           fontSize: em(24, 18),
-          marginTop: em(40, 24),
+          marginTop: '0',
           marginBottom: em(16, 24),
           lineHeight: round(36 / 24),
         },
         h4: {
-          marginTop: em(32, 18),
+          marginTop: '0',
           marginBottom: em(8, 18),
           lineHeight: round(28 / 18),
         },
@@ -514,9 +516,6 @@ let defaultModifiers = {
           paddingBottom: em(12, 16),
           paddingLeft: em(12, 16),
         },
-        'thead th:first-child': {
-          paddingLeft: '0',
-        },
         'thead th:last-child': {
           paddingRight: '0',
         },
@@ -525,365 +524,6 @@ let defaultModifiers = {
           paddingRight: em(12, 16),
           paddingBottom: em(12, 16),
           paddingLeft: em(12, 16),
-        },
-        'tbody td:first-child, tfoot td:first-child': {
-          paddingLeft: '0',
-        },
-        'tbody td:last-child, tfoot td:last-child': {
-          paddingRight: '0',
-        },
-      },
-      {
-        '> :first-child': {
-          marginTop: '0',
-        },
-        '> :last-child': {
-          marginBottom: '0',
-        },
-      },
-    ],
-  },
-  xl: {
-    css: [
-      {
-        fontSize: rem(20),
-        lineHeight: round(36 / 20),
-        p: {
-          marginTop: em(24, 20),
-          marginBottom: em(24, 20),
-        },
-        '[class~="lead"]': {
-          fontSize: em(24, 20),
-          lineHeight: round(36 / 24),
-          marginTop: em(24, 24),
-          marginBottom: em(24, 24),
-        },
-        blockquote: {
-          marginTop: em(48, 30),
-          marginBottom: em(48, 30),
-          paddingLeft: em(32, 30),
-        },
-        h1: {
-          fontSize: em(56, 20),
-          marginTop: '0',
-          marginBottom: em(48, 56),
-          lineHeight: round(56 / 56),
-        },
-        h2: {
-          fontSize: em(36, 20),
-          marginTop: em(56, 36),
-          marginBottom: em(32, 36),
-          lineHeight: round(40 / 36),
-        },
-        h3: {
-          fontSize: em(30, 20),
-          marginTop: em(48, 30),
-          marginBottom: em(20, 30),
-          lineHeight: round(40 / 30),
-        },
-        h4: {
-          marginTop: em(36, 20),
-          marginBottom: em(12, 20),
-          lineHeight: round(32 / 20),
-        },
-        img: {
-          marginTop: em(40, 20),
-          marginBottom: em(40, 20),
-        },
-        video: {
-          marginTop: em(40, 20),
-          marginBottom: em(40, 20),
-        },
-        figure: {
-          marginTop: em(40, 20),
-          marginBottom: em(40, 20),
-        },
-        'figure > *': {
-          marginTop: '0',
-          marginBottom: '0',
-        },
-        figcaption: {
-          fontSize: em(18, 20),
-          lineHeight: round(28 / 18),
-          marginTop: em(18, 18),
-        },
-        code: {
-          fontSize: em(18, 20),
-        },
-        'h2 code': {
-          fontSize: em(31, 36),
-        },
-        'h3 code': {
-          fontSize: em(27, 30),
-        },
-        pre: {
-          fontSize: em(18, 20),
-          lineHeight: round(32 / 18),
-          marginTop: em(36, 18),
-          marginBottom: em(36, 18),
-          borderRadius: rem(8),
-          paddingTop: em(20, 18),
-          paddingRight: em(24, 18),
-          paddingBottom: em(20, 18),
-          paddingLeft: em(24, 18),
-        },
-        ol: {
-          marginTop: em(24, 20),
-          marginBottom: em(24, 20),
-          paddingLeft: em(32, 20),
-        },
-        ul: {
-          marginTop: em(24, 20),
-          marginBottom: em(24, 20),
-          paddingLeft: em(32, 20),
-        },
-        li: {
-          marginTop: em(12, 20),
-          marginBottom: em(12, 20),
-        },
-        'ol > li': {
-          paddingLeft: em(8, 20),
-        },
-        'ul > li': {
-          paddingLeft: em(8, 20),
-        },
-        '> ul > li p': {
-          marginTop: em(16, 20),
-          marginBottom: em(16, 20),
-        },
-        '> ul > li > *:first-child': {
-          marginTop: em(24, 20),
-        },
-        '> ul > li > *:last-child': {
-          marginBottom: em(24, 20),
-        },
-        '> ol > li > *:first-child': {
-          marginTop: em(24, 20),
-        },
-        '> ol > li > *:last-child': {
-          marginBottom: em(24, 20),
-        },
-        'ul ul, ul ol, ol ul, ol ol': {
-          marginTop: em(16, 20),
-          marginBottom: em(16, 20),
-        },
-        hr: {
-          marginTop: em(56, 20),
-          marginBottom: em(56, 20),
-        },
-        'hr + *': {
-          marginTop: '0',
-        },
-        'h2 + *': {
-          marginTop: '0',
-        },
-        'h3 + *': {
-          marginTop: '0',
-        },
-        'h4 + *': {
-          marginTop: '0',
-        },
-        table: {
-          fontSize: em(18, 20),
-          lineHeight: round(28 / 18),
-        },
-        'thead th': {
-          paddingRight: em(12, 18),
-          paddingBottom: em(16, 18),
-          paddingLeft: em(12, 18),
-        },
-        'thead th:first-child': {
-          paddingLeft: '0',
-        },
-        'thead th:last-child': {
-          paddingRight: '0',
-        },
-        'tbody td, tfoot td': {
-          paddingTop: em(16, 18),
-          paddingRight: em(12, 18),
-          paddingBottom: em(16, 18),
-          paddingLeft: em(12, 18),
-        },
-        'tbody td:first-child, tfoot td:first-child': {
-          paddingLeft: '0',
-        },
-        'tbody td:last-child, tfoot td:last-child': {
-          paddingRight: '0',
-        },
-      },
-      {
-        '> :first-child': {
-          marginTop: '0',
-        },
-        '> :last-child': {
-          marginBottom: '0',
-        },
-      },
-    ],
-  },
-  '2xl': {
-    css: [
-      {
-        fontSize: rem(24),
-        lineHeight: round(40 / 24),
-        p: {
-          marginTop: em(32, 24),
-          marginBottom: em(32, 24),
-        },
-        '[class~="lead"]': {
-          fontSize: em(30, 24),
-          lineHeight: round(44 / 30),
-          marginTop: em(32, 30),
-          marginBottom: em(32, 30),
-        },
-        blockquote: {
-          marginTop: em(64, 36),
-          marginBottom: em(64, 36),
-          paddingLeft: em(40, 36),
-        },
-        h1: {
-          fontSize: em(64, 24),
-          marginTop: '0',
-          marginBottom: em(56, 64),
-          lineHeight: round(64 / 64),
-        },
-        h2: {
-          fontSize: em(48, 24),
-          marginTop: em(72, 48),
-          marginBottom: em(40, 48),
-          lineHeight: round(52 / 48),
-        },
-        h3: {
-          fontSize: em(36, 24),
-          marginTop: em(56, 36),
-          marginBottom: em(24, 36),
-          lineHeight: round(44 / 36),
-        },
-        h4: {
-          marginTop: em(40, 24),
-          marginBottom: em(16, 24),
-          lineHeight: round(36 / 24),
-        },
-        img: {
-          marginTop: em(48, 24),
-          marginBottom: em(48, 24),
-        },
-        video: {
-          marginTop: em(48, 24),
-          marginBottom: em(48, 24),
-        },
-        figure: {
-          marginTop: em(48, 24),
-          marginBottom: em(48, 24),
-        },
-        'figure > *': {
-          marginTop: '0',
-          marginBottom: '0',
-        },
-        figcaption: {
-          fontSize: em(20, 24),
-          lineHeight: round(32 / 20),
-          marginTop: em(20, 20),
-        },
-        code: {
-          fontSize: em(20, 24),
-        },
-        'h2 code': {
-          fontSize: em(42, 48),
-        },
-        'h3 code': {
-          fontSize: em(32, 36),
-        },
-        pre: {
-          fontSize: em(20, 24),
-          lineHeight: round(36 / 20),
-          marginTop: em(40, 20),
-          marginBottom: em(40, 20),
-          borderRadius: rem(8),
-          paddingTop: em(24, 20),
-          paddingRight: em(32, 20),
-          paddingBottom: em(24, 20),
-          paddingLeft: em(32, 20),
-        },
-        ol: {
-          marginTop: em(32, 24),
-          marginBottom: em(32, 24),
-          paddingLeft: em(38, 24),
-        },
-        ul: {
-          marginTop: em(32, 24),
-          marginBottom: em(32, 24),
-          paddingLeft: em(38, 24),
-        },
-        li: {
-          marginTop: em(12, 24),
-          marginBottom: em(12, 24),
-        },
-        'ol > li': {
-          paddingLeft: em(10, 24),
-        },
-        'ul > li': {
-          paddingLeft: em(10, 24),
-        },
-        '> ul > li p': {
-          marginTop: em(20, 24),
-          marginBottom: em(20, 24),
-        },
-        '> ul > li > *:first-child': {
-          marginTop: em(32, 24),
-        },
-        '> ul > li > *:last-child': {
-          marginBottom: em(32, 24),
-        },
-        '> ol > li > *:first-child': {
-          marginTop: em(32, 24),
-        },
-        '> ol > li > *:last-child': {
-          marginBottom: em(32, 24),
-        },
-        'ul ul, ul ol, ol ul, ol ol': {
-          marginTop: em(16, 24),
-          marginBottom: em(16, 24),
-        },
-        hr: {
-          marginTop: em(72, 24),
-          marginBottom: em(72, 24),
-        },
-        'hr + *': {
-          marginTop: '0',
-        },
-        'h2 + *': {
-          marginTop: '0',
-        },
-        'h3 + *': {
-          marginTop: '0',
-        },
-        'h4 + *': {
-          marginTop: '0',
-        },
-        table: {
-          fontSize: em(20, 24),
-          lineHeight: round(28 / 20),
-        },
-        'thead th': {
-          paddingRight: em(12, 20),
-          paddingBottom: em(16, 20),
-          paddingLeft: em(12, 20),
-        },
-        'thead th:first-child': {
-          paddingLeft: '0',
-        },
-        'thead th:last-child': {
-          paddingRight: '0',
-        },
-        'tbody td, tfoot td': {
-          paddingTop: em(16, 20),
-          paddingRight: em(12, 20),
-          paddingBottom: em(16, 20),
-          paddingLeft: em(12, 20),
-        },
-        'tbody td:first-child, tfoot td:first-child': {
-          paddingLeft: '0',
         },
         'tbody td:last-child, tfoot td:last-child': {
           paddingRight: '0',
@@ -903,22 +543,22 @@ let defaultModifiers = {
   // Invert (for dark mode)
   invert: {
     css: {
-      '--tw-prose-body': 'var(--tw-prose-invert-body)',
-      '--tw-prose-headings': 'var(--tw-prose-invert-headings)',
-      '--tw-prose-lead': 'var(--tw-prose-invert-lead)',
-      '--tw-prose-links': 'var(--tw-prose-invert-links)',
-      '--tw-prose-bold': 'var(--tw-prose-invert-bold)',
-      '--tw-prose-counters': 'var(--tw-prose-invert-counters)',
-      '--tw-prose-bullets': 'var(--tw-prose-invert-bullets)',
-      '--tw-prose-hr': 'var(--tw-prose-invert-hr)',
-      '--tw-prose-quotes': 'var(--tw-prose-invert-quotes)',
-      '--tw-prose-quote-borders': 'var(--tw-prose-invert-quote-borders)',
-      '--tw-prose-captions': 'var(--tw-prose-invert-captions)',
-      '--tw-prose-code': 'var(--tw-prose-invert-code)',
-      '--tw-prose-pre-code': 'var(--tw-prose-invert-pre-code)',
-      '--tw-prose-pre-bg': 'var(--tw-prose-invert-pre-bg)',
-      '--tw-prose-th-borders': 'var(--tw-prose-invert-th-borders)',
-      '--tw-prose-td-borders': 'var(--tw-prose-invert-td-borders)',
+      '--tw-format-body': 'var(--tw-format-invert-body)',
+      '--tw-format-headings': 'var(--tw-format-invert-headings)',
+      '--tw-format-lead': 'var(--tw-format-invert-lead)',
+      '--tw-format-links': 'var(--tw-format-invert-links)',
+      '--tw-format-bold': 'var(--tw-format-invert-bold)',
+      '--tw-format-counters': 'var(--tw-format-invert-counters)',
+      '--tw-format-bullets': 'var(--tw-format-invert-bullets)',
+      '--tw-format-hr': 'var(--tw-format-invert-hr)',
+      '--tw-format-quotes': 'var(--tw-format-invert-quotes)',
+      '--tw-format-quote-borders': 'var(--tw-format-invert-quote-borders)',
+      '--tw-format-captions': 'var(--tw-format-invert-captions)',
+      '--tw-format-code': 'var(--tw-format-invert-code)',
+      '--tw-format-pre-code': 'var(--tw-format-invert-pre-code)',
+      '--tw-format-pre-bg': 'var(--tw-format-invert-pre-bg)',
+      '--tw-format-th-borders': 'var(--tw-format-invert-th-borders)',
+      '--tw-format-td-borders': 'var(--tw-format-invert-td-borders)',
     },
   },
 
@@ -926,186 +566,188 @@ let defaultModifiers = {
 
   slate: {
     css: {
-      '--tw-prose-body': colors.slate[700],
-      '--tw-prose-headings': colors.slate[900],
-      '--tw-prose-lead': colors.slate[600],
-      '--tw-prose-links': colors.slate[900],
-      '--tw-prose-bold': colors.slate[900],
-      '--tw-prose-counters': colors.slate[500],
-      '--tw-prose-bullets': colors.slate[300],
-      '--tw-prose-hr': colors.slate[200],
-      '--tw-prose-quotes': colors.slate[900],
-      '--tw-prose-quote-borders': colors.slate[200],
-      '--tw-prose-captions': colors.slate[500],
-      '--tw-prose-code': colors.slate[900],
-      '--tw-prose-pre-code': colors.slate[200],
-      '--tw-prose-pre-bg': colors.slate[800],
-      '--tw-prose-th-borders': colors.slate[300],
-      '--tw-prose-td-borders': colors.slate[200],
-      '--tw-prose-invert-body': colors.slate[300],
-      '--tw-prose-invert-headings': colors.white,
-      '--tw-prose-invert-lead': colors.slate[400],
-      '--tw-prose-invert-links': colors.white,
-      '--tw-prose-invert-bold': colors.white,
-      '--tw-prose-invert-counters': colors.slate[400],
-      '--tw-prose-invert-bullets': colors.slate[600],
-      '--tw-prose-invert-hr': colors.slate[700],
-      '--tw-prose-invert-quotes': colors.slate[100],
-      '--tw-prose-invert-quote-borders': colors.slate[700],
-      '--tw-prose-invert-captions': colors.slate[400],
-      '--tw-prose-invert-code': colors.white,
-      '--tw-prose-invert-pre-code': colors.slate[300],
-      '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-      '--tw-prose-invert-th-borders': colors.slate[600],
-      '--tw-prose-invert-td-borders': colors.slate[700],
+      '--tw-format-body': colors.slate[700],
+      '--tw-format-headings': colors.slate[900],
+      '--tw-format-lead': colors.slate[600],
+      '--tw-format-links': colors.slate[900],
+      '--tw-format-bold': colors.slate[900],
+      '--tw-format-counters': colors.slate[500],
+      '--tw-format-bullets': colors.slate[300],
+      '--tw-format-hr': colors.slate[200],
+      '--tw-format-quotes': colors.slate[900],
+      '--tw-format-quote-borders': colors.slate[200],
+      '--tw-format-captions': colors.slate[500],
+      '--tw-format-code': colors.slate[900],
+      '--tw-format-pre-code': colors.slate[200],
+      '--tw-format-pre-bg': colors.slate[800],
+      '--tw-format-th-borders': colors.slate[300],
+      '--tw-format-td-borders': colors.slate[200],
+      '--tw-format-invert-body': colors.slate[300],
+      '--tw-format-invert-headings': colors.white,
+      '--tw-format-invert-lead': colors.slate[400],
+      '--tw-format-invert-links': colors.white,
+      '--tw-format-invert-bold': colors.white,
+      '--tw-format-invert-counters': colors.slate[400],
+      '--tw-format-invert-bullets': colors.slate[600],
+      '--tw-format-invert-hr': colors.slate[700],
+      '--tw-format-invert-quotes': colors.slate[100],
+      '--tw-format-invert-quote-borders': colors.slate[700],
+      '--tw-format-invert-captions': colors.slate[400],
+      '--tw-format-invert-code': colors.white,
+      '--tw-format-invert-pre-code': colors.slate[300],
+      '--tw-format-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+      '--tw-format-invert-th-borders': colors.slate[600],
+      '--tw-format-invert-td-borders': colors.slate[700],
     },
   },
 
   gray: {
     css: {
-      '--tw-prose-body': colors.gray[700],
-      '--tw-prose-headings': colors.gray[900],
-      '--tw-prose-lead': colors.gray[600],
-      '--tw-prose-links': colors.gray[900],
-      '--tw-prose-bold': colors.gray[900],
-      '--tw-prose-counters': colors.gray[500],
-      '--tw-prose-bullets': colors.gray[300],
-      '--tw-prose-hr': colors.gray[200],
-      '--tw-prose-quotes': colors.gray[900],
-      '--tw-prose-quote-borders': colors.gray[200],
-      '--tw-prose-captions': colors.gray[500],
-      '--tw-prose-code': colors.gray[900],
-      '--tw-prose-pre-code': colors.gray[200],
-      '--tw-prose-pre-bg': colors.gray[800],
-      '--tw-prose-th-borders': colors.gray[300],
-      '--tw-prose-td-borders': colors.gray[200],
-      '--tw-prose-invert-body': colors.gray[300],
-      '--tw-prose-invert-headings': colors.white,
-      '--tw-prose-invert-lead': colors.gray[400],
-      '--tw-prose-invert-links': colors.white,
-      '--tw-prose-invert-bold': colors.white,
-      '--tw-prose-invert-counters': colors.gray[400],
-      '--tw-prose-invert-bullets': colors.gray[600],
-      '--tw-prose-invert-hr': colors.gray[700],
-      '--tw-prose-invert-quotes': colors.gray[100],
-      '--tw-prose-invert-quote-borders': colors.gray[700],
-      '--tw-prose-invert-captions': colors.gray[400],
-      '--tw-prose-invert-code': colors.white,
-      '--tw-prose-invert-pre-code': colors.gray[300],
-      '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-      '--tw-prose-invert-th-borders': colors.gray[600],
-      '--tw-prose-invert-td-borders': colors.gray[700],
+      '--tw-format-body': colors.gray[500],
+      '--tw-format-headings': colors.gray[900],
+      '--tw-format-lead': colors.gray[500],
+      '--tw-format-links': colors.gray[600],
+      '--tw-format-bold': colors.gray[900],
+      '--tw-format-counters': colors.gray[500],
+      '--tw-format-bullets': colors.gray[500],
+      '--tw-format-hr': colors.gray[200],
+      '--tw-format-quotes': colors.gray[900],
+      '--tw-format-quote-borders': colors.gray[200],
+      '--tw-format-captions': colors.gray[500],
+      '--tw-format-code': colors.gray[900],
+      '--tw-format-code-bg': colors.gray[100],
+      '--tw-format-pre-code': colors.gray[600],
+      '--tw-format-pre-bg': colors.gray[100],
+      '--tw-format-th-borders': colors.gray[200],
+      '--tw-format-th-bg': colors.gray[50],
+      '--tw-format-td-borders': colors.gray[200],
+      '--tw-format-invert-body': colors.gray[300],
+      '--tw-format-invert-headings': colors.white,
+      '--tw-format-invert-lead': colors.gray[400],
+      '--tw-format-invert-links': colors.white,
+      '--tw-format-invert-bold': colors.white,
+      '--tw-format-invert-counters': colors.gray[400],
+      '--tw-format-invert-bullets': colors.gray[600],
+      '--tw-format-invert-hr': colors.gray[700],
+      '--tw-format-invert-quotes': colors.gray[100],
+      '--tw-format-invert-quote-borders': colors.gray[700],
+      '--tw-format-invert-captions': colors.gray[400],
+      '--tw-format-invert-code': colors.white,
+      '--tw-format-invert-pre-code': colors.gray[300],
+      '--tw-format-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+      '--tw-format-invert-th-borders': colors.gray[600],
+      '--tw-format-invert-td-borders': colors.gray[700],
     },
   },
 
   zinc: {
     css: {
-      '--tw-prose-body': colors.zinc[700],
-      '--tw-prose-headings': colors.zinc[900],
-      '--tw-prose-lead': colors.zinc[600],
-      '--tw-prose-links': colors.zinc[900],
-      '--tw-prose-bold': colors.zinc[900],
-      '--tw-prose-counters': colors.zinc[500],
-      '--tw-prose-bullets': colors.zinc[300],
-      '--tw-prose-hr': colors.zinc[200],
-      '--tw-prose-quotes': colors.zinc[900],
-      '--tw-prose-quote-borders': colors.zinc[200],
-      '--tw-prose-captions': colors.zinc[500],
-      '--tw-prose-code': colors.zinc[900],
-      '--tw-prose-pre-code': colors.zinc[200],
-      '--tw-prose-pre-bg': colors.zinc[800],
-      '--tw-prose-th-borders': colors.zinc[300],
-      '--tw-prose-td-borders': colors.zinc[200],
-      '--tw-prose-invert-body': colors.zinc[300],
-      '--tw-prose-invert-headings': colors.white,
-      '--tw-prose-invert-lead': colors.zinc[400],
-      '--tw-prose-invert-links': colors.white,
-      '--tw-prose-invert-bold': colors.white,
-      '--tw-prose-invert-counters': colors.zinc[400],
-      '--tw-prose-invert-bullets': colors.zinc[600],
-      '--tw-prose-invert-hr': colors.zinc[700],
-      '--tw-prose-invert-quotes': colors.zinc[100],
-      '--tw-prose-invert-quote-borders': colors.zinc[700],
-      '--tw-prose-invert-captions': colors.zinc[400],
-      '--tw-prose-invert-code': colors.white,
-      '--tw-prose-invert-pre-code': colors.zinc[300],
-      '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-      '--tw-prose-invert-th-borders': colors.zinc[600],
-      '--tw-prose-invert-td-borders': colors.zinc[700],
+      '--tw-format-body': colors.zinc[700],
+      '--tw-format-headings': colors.zinc[900],
+      '--tw-format-lead': colors.zinc[600],
+      '--tw-format-links': colors.zinc[900],
+      '--tw-format-bold': colors.zinc[900],
+      '--tw-format-counters': colors.zinc[500],
+      '--tw-format-bullets': colors.zinc[300],
+      '--tw-format-hr': colors.zinc[200],
+      '--tw-format-quotes': colors.zinc[900],
+      '--tw-format-quote-borders': colors.zinc[200],
+      '--tw-format-captions': colors.zinc[500],
+      '--tw-format-code': colors.zinc[900],
+      '--tw-format-pre-code': colors.zinc[200],
+      '--tw-format-pre-bg': colors.zinc[800],
+      '--tw-format-th-borders': colors.zinc[300],
+      '--tw-format-td-borders': colors.zinc[200],
+      '--tw-format-invert-body': colors.zinc[300],
+      '--tw-format-invert-headings': colors.white,
+      '--tw-format-invert-lead': colors.zinc[400],
+      '--tw-format-invert-links': colors.white,
+      '--tw-format-invert-bold': colors.white,
+      '--tw-format-invert-counters': colors.zinc[400],
+      '--tw-format-invert-bullets': colors.zinc[600],
+      '--tw-format-invert-hr': colors.zinc[700],
+      '--tw-format-invert-quotes': colors.zinc[100],
+      '--tw-format-invert-quote-borders': colors.zinc[700],
+      '--tw-format-invert-captions': colors.zinc[400],
+      '--tw-format-invert-code': colors.white,
+      '--tw-format-invert-pre-code': colors.zinc[300],
+      '--tw-format-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+      '--tw-format-invert-th-borders': colors.zinc[600],
+      '--tw-format-invert-td-borders': colors.zinc[700],
     },
   },
 
   neutral: {
     css: {
-      '--tw-prose-body': colors.neutral[700],
-      '--tw-prose-headings': colors.neutral[900],
-      '--tw-prose-lead': colors.neutral[600],
-      '--tw-prose-links': colors.neutral[900],
-      '--tw-prose-bold': colors.neutral[900],
-      '--tw-prose-counters': colors.neutral[500],
-      '--tw-prose-bullets': colors.neutral[300],
-      '--tw-prose-hr': colors.neutral[200],
-      '--tw-prose-quotes': colors.neutral[900],
-      '--tw-prose-quote-borders': colors.neutral[200],
-      '--tw-prose-captions': colors.neutral[500],
-      '--tw-prose-code': colors.neutral[900],
-      '--tw-prose-pre-code': colors.neutral[200],
-      '--tw-prose-pre-bg': colors.neutral[800],
-      '--tw-prose-th-borders': colors.neutral[300],
-      '--tw-prose-td-borders': colors.neutral[200],
-      '--tw-prose-invert-body': colors.neutral[300],
-      '--tw-prose-invert-headings': colors.white,
-      '--tw-prose-invert-lead': colors.neutral[400],
-      '--tw-prose-invert-links': colors.white,
-      '--tw-prose-invert-bold': colors.white,
-      '--tw-prose-invert-counters': colors.neutral[400],
-      '--tw-prose-invert-bullets': colors.neutral[600],
-      '--tw-prose-invert-hr': colors.neutral[700],
-      '--tw-prose-invert-quotes': colors.neutral[100],
-      '--tw-prose-invert-quote-borders': colors.neutral[700],
-      '--tw-prose-invert-captions': colors.neutral[400],
-      '--tw-prose-invert-code': colors.white,
-      '--tw-prose-invert-pre-code': colors.neutral[300],
-      '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-      '--tw-prose-invert-th-borders': colors.neutral[600],
-      '--tw-prose-invert-td-borders': colors.neutral[700],
+      '--tw-format-body': colors.neutral[700],
+      '--tw-format-headings': colors.neutral[900],
+      '--tw-format-lead': colors.neutral[600],
+      '--tw-format-links': colors.neutral[900],
+      '--tw-format-bold': colors.neutral[900],
+      '--tw-format-counters': colors.neutral[500],
+      '--tw-format-bullets': colors.neutral[300],
+      '--tw-format-hr': colors.neutral[200],
+      '--tw-format-quotes': colors.neutral[900],
+      '--tw-format-quote-borders': colors.neutral[200],
+      '--tw-format-captions': colors.neutral[500],
+      '--tw-format-code': colors.neutral[900],
+      '--tw-format-pre-code': colors.neutral[200],
+      '--tw-format-pre-bg': colors.neutral[800],
+      '--tw-format-th-borders': colors.neutral[300],
+      '--tw-format-td-borders': colors.neutral[200],
+      '--tw-format-invert-body': colors.neutral[300],
+      '--tw-format-invert-headings': colors.white,
+      '--tw-format-invert-lead': colors.neutral[400],
+      '--tw-format-invert-links': colors.white,
+      '--tw-format-invert-bold': colors.white,
+      '--tw-format-invert-counters': colors.neutral[400],
+      '--tw-format-invert-bullets': colors.neutral[600],
+      '--tw-format-invert-hr': colors.neutral[700],
+      '--tw-format-invert-quotes': colors.neutral[100],
+      '--tw-format-invert-quote-borders': colors.neutral[700],
+      '--tw-format-invert-captions': colors.neutral[400],
+      '--tw-format-invert-code': colors.white,
+      '--tw-format-invert-pre-code': colors.neutral[300],
+      '--tw-format-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+      '--tw-format-invert-th-borders': colors.neutral[600],
+      '--tw-format-invert-td-borders': colors.neutral[700],
     },
   },
 
   stone: {
     css: {
-      '--tw-prose-body': colors.stone[700],
-      '--tw-prose-headings': colors.stone[900],
-      '--tw-prose-lead': colors.stone[600],
-      '--tw-prose-links': colors.stone[900],
-      '--tw-prose-bold': colors.stone[900],
-      '--tw-prose-counters': colors.stone[500],
-      '--tw-prose-bullets': colors.stone[300],
-      '--tw-prose-hr': colors.stone[200],
-      '--tw-prose-quotes': colors.stone[900],
-      '--tw-prose-quote-borders': colors.stone[200],
-      '--tw-prose-captions': colors.stone[500],
-      '--tw-prose-code': colors.stone[900],
-      '--tw-prose-pre-code': colors.stone[200],
-      '--tw-prose-pre-bg': colors.stone[800],
-      '--tw-prose-th-borders': colors.stone[300],
-      '--tw-prose-td-borders': colors.stone[200],
-      '--tw-prose-invert-body': colors.stone[300],
-      '--tw-prose-invert-headings': colors.white,
-      '--tw-prose-invert-lead': colors.stone[400],
-      '--tw-prose-invert-links': colors.white,
-      '--tw-prose-invert-bold': colors.white,
-      '--tw-prose-invert-counters': colors.stone[400],
-      '--tw-prose-invert-bullets': colors.stone[600],
-      '--tw-prose-invert-hr': colors.stone[700],
-      '--tw-prose-invert-quotes': colors.stone[100],
-      '--tw-prose-invert-quote-borders': colors.stone[700],
-      '--tw-prose-invert-captions': colors.stone[400],
-      '--tw-prose-invert-code': colors.white,
-      '--tw-prose-invert-pre-code': colors.stone[300],
-      '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-      '--tw-prose-invert-th-borders': colors.stone[600],
-      '--tw-prose-invert-td-borders': colors.stone[700],
+      '--tw-format-body': colors.stone[700],
+      '--tw-format-headings': colors.stone[900],
+      '--tw-format-lead': colors.stone[600],
+      '--tw-format-links': colors.stone[900],
+      '--tw-format-bold': colors.stone[900],
+      '--tw-format-counters': colors.stone[500],
+      '--tw-format-bullets': colors.stone[300],
+      '--tw-format-hr': colors.stone[200],
+      '--tw-format-quotes': colors.stone[900],
+      '--tw-format-quote-borders': colors.stone[200],
+      '--tw-format-captions': colors.stone[500],
+      '--tw-format-code': colors.stone[900],
+      '--tw-format-pre-code': colors.stone[200],
+      '--tw-format-pre-bg': colors.stone[800],
+      '--tw-format-th-borders': colors.stone[300],
+      '--tw-format-td-borders': colors.stone[200],
+      '--tw-format-invert-body': colors.stone[300],
+      '--tw-format-invert-headings': colors.white,
+      '--tw-format-invert-lead': colors.stone[400],
+      '--tw-format-invert-links': colors.white,
+      '--tw-format-invert-bold': colors.white,
+      '--tw-format-invert-counters': colors.stone[400],
+      '--tw-format-invert-bullets': colors.stone[600],
+      '--tw-format-invert-hr': colors.stone[700],
+      '--tw-format-invert-quotes': colors.stone[100],
+      '--tw-format-invert-quote-borders': colors.stone[700],
+      '--tw-format-invert-captions': colors.stone[400],
+      '--tw-format-invert-code': colors.white,
+      '--tw-format-invert-pre-code': colors.stone[300],
+      '--tw-format-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+      '--tw-format-invert-th-borders': colors.stone[600],
+      '--tw-format-invert-td-borders': colors.stone[700],
     },
   },
 
@@ -1113,120 +755,120 @@ let defaultModifiers = {
 
   red: {
     css: {
-      '--tw-prose-links': colors.red[600],
-      '--tw-prose-invert-links': colors.red[500],
+      '--tw-format-links': colors.red[600],
+      '--tw-format-invert-links': colors.red[500],
     },
   },
 
   orange: {
     css: {
-      '--tw-prose-links': colors.orange[600],
-      '--tw-prose-invert-links': colors.orange[500],
+      '--tw-format-links': colors.orange[600],
+      '--tw-format-invert-links': colors.orange[500],
     },
   },
 
   amber: {
     css: {
-      '--tw-prose-links': colors.amber[600],
-      '--tw-prose-invert-links': colors.amber[500],
+      '--tw-format-links': colors.amber[600],
+      '--tw-format-invert-links': colors.amber[500],
     },
   },
 
   yellow: {
     css: {
-      '--tw-prose-links': colors.yellow[600],
-      '--tw-prose-invert-links': colors.yellow[500],
+      '--tw-format-links': colors.yellow[600],
+      '--tw-format-invert-links': colors.yellow[500],
     },
   },
 
   lime: {
     css: {
-      '--tw-prose-links': colors.lime[600],
-      '--tw-prose-invert-links': colors.lime[500],
+      '--tw-format-links': colors.lime[600],
+      '--tw-format-invert-links': colors.lime[500],
     },
   },
 
   green: {
     css: {
-      '--tw-prose-links': colors.green[600],
-      '--tw-prose-invert-links': colors.green[500],
+      '--tw-format-links': colors.green[600],
+      '--tw-format-invert-links': colors.green[500],
     },
   },
 
   emerald: {
     css: {
-      '--tw-prose-links': colors.emerald[600],
-      '--tw-prose-invert-links': colors.emerald[500],
+      '--tw-format-links': colors.emerald[600],
+      '--tw-format-invert-links': colors.emerald[500],
     },
   },
 
   teal: {
     css: {
-      '--tw-prose-links': colors.teal[600],
-      '--tw-prose-invert-links': colors.teal[500],
+      '--tw-format-links': colors.teal[600],
+      '--tw-format-invert-links': colors.teal[500],
     },
   },
 
   cyan: {
     css: {
-      '--tw-prose-links': colors.cyan[600],
-      '--tw-prose-invert-links': colors.cyan[500],
+      '--tw-format-links': colors.cyan[600],
+      '--tw-format-invert-links': colors.cyan[500],
     },
   },
 
   sky: {
     css: {
-      '--tw-prose-links': colors.sky[600],
-      '--tw-prose-invert-links': colors.sky[500],
+      '--tw-format-links': colors.sky[600],
+      '--tw-format-invert-links': colors.sky[500],
     },
   },
 
   blue: {
     css: {
-      '--tw-prose-links': colors.blue[600],
-      '--tw-prose-invert-links': colors.blue[500],
+      '--tw-format-links': colors.blue[600],
+      '--tw-format-invert-links': colors.blue[500],
     },
   },
 
   indigo: {
     css: {
-      '--tw-prose-links': colors.indigo[600],
-      '--tw-prose-invert-links': colors.indigo[500],
+      '--tw-format-links': colors.indigo[600],
+      '--tw-format-invert-links': colors.indigo[500],
     },
   },
 
   violet: {
     css: {
-      '--tw-prose-links': colors.violet[600],
-      '--tw-prose-invert-links': colors.violet[500],
+      '--tw-format-links': colors.violet[600],
+      '--tw-format-invert-links': colors.violet[500],
     },
   },
 
   purple: {
     css: {
-      '--tw-prose-links': colors.purple[600],
-      '--tw-prose-invert-links': colors.purple[500],
+      '--tw-format-links': colors.purple[600],
+      '--tw-format-invert-links': colors.purple[500],
     },
   },
 
   fuchsia: {
     css: {
-      '--tw-prose-links': colors.fuchsia[600],
-      '--tw-prose-invert-links': colors.fuchsia[500],
+      '--tw-format-links': colors.fuchsia[600],
+      '--tw-format-invert-links': colors.fuchsia[500],
     },
   },
 
   pink: {
     css: {
-      '--tw-prose-links': colors.pink[600],
-      '--tw-prose-invert-links': colors.pink[500],
+      '--tw-format-links': colors.pink[600],
+      '--tw-format-invert-links': colors.pink[500],
     },
   },
 
   rose: {
     css: {
-      '--tw-prose-links': colors.rose[600],
-      '--tw-prose-invert-links': colors.rose[500],
+      '--tw-format-links': colors.rose[600],
+      '--tw-format-invert-links': colors.rose[500],
     },
   },
 }
@@ -1235,19 +877,22 @@ module.exports = {
   DEFAULT: {
     css: [
       {
-        color: 'var(--tw-prose-body)',
+        color: 'var(--tw-format-body)',
         maxWidth: '65ch',
         '[class~="lead"]': {
-          color: 'var(--tw-prose-lead)',
+          color: 'var(--tw-format-lead)',
         },
         a: {
-          color: 'var(--tw-prose-links)',
+          color: 'var(--tw-format-links)',
           textDecoration: 'underline',
           fontWeight: '500',
+          '&:hover': {
+            textDecoration: 'none'
+          }
         },
         strong: {
-          color: 'var(--tw-prose-bold)',
-          fontWeight: '600',
+          color: 'var(--tw-format-bold)',
+          fontWeight: '700',
         },
         'a strong': {
           color: 'inherit',
@@ -1293,22 +938,30 @@ module.exports = {
         },
         'ol > li::marker': {
           fontWeight: '400',
-          color: 'var(--tw-prose-counters)',
+          color: 'var(--tw-format-counters)',
         },
         'ul > li::marker': {
-          color: 'var(--tw-prose-bullets)',
+          color: 'var(--tw-format-bullets)',
         },
         hr: {
-          borderColor: 'var(--tw-prose-hr)',
+          borderColor: 'var(--tw-format-hr)',
           borderTopWidth: 1,
         },
         blockquote: {
-          fontWeight: '500',
+          fontSize: em(20, 18),
+          fontWeight: '700',
           fontStyle: 'italic',
-          color: 'var(--tw-prose-quotes)',
-          borderLeftWidth: '0.25rem',
-          borderLeftColor: 'var(--tw-prose-quote-borders)',
+          color: 'var(--tw-format-quotes)',
           quotes: '"\\201C""\\201D""\\2018""\\2019"',
+        },
+        'blockquote::before': {
+          content: '""',
+          backgroundImage: `url("data:image/svg+xml,%0A%3Csvg width='32' height='24' viewBox='0 0 32 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.6893 24V14.1453C18.6893 6.54 23.664 1.38533 30.6667 -7.15256e-07L31.9933 2.868C28.7507 4.09066 26.6667 7.71867 26.6667 10.6667H32V24H18.6893ZM-9.53674e-07 24V14.1453C-9.53674e-07 6.54 4.99733 1.384 12 -7.15256e-07L13.328 2.868C10.084 4.09066 8 7.71867 8 10.6667L13.3107 10.6667V24H-9.53674e-07Z' fill='%239CA3AF'/%3E%3C/svg%3E%0A")`,
+          backgroundRepeat: 'no-repeat',
+          color: 'var(--tw-format-quotes)',
+          width: em(32, 18),
+          height: em(24, 18),
+          display: 'block',
         },
         'blockquote p:first-of-type::before': {
           content: 'open-quote',
@@ -1317,7 +970,7 @@ module.exports = {
           content: 'close-quote',
         },
         h1: {
-          color: 'var(--tw-prose-headings)',
+          color: 'var(--tw-format-headings)',
           fontWeight: '800',
         },
         'h1 strong': {
@@ -1325,7 +978,7 @@ module.exports = {
           color: 'inherit',
         },
         h2: {
-          color: 'var(--tw-prose-headings)',
+          color: 'var(--tw-format-headings)',
           fontWeight: '700',
         },
         'h2 strong': {
@@ -1333,15 +986,15 @@ module.exports = {
           color: 'inherit',
         },
         h3: {
-          color: 'var(--tw-prose-headings)',
-          fontWeight: '600',
+          color: 'var(--tw-format-headings)',
+          fontWeight: '700',
         },
         'h3 strong': {
-          fontWeight: '700',
+          fontWeight: '800',
           color: 'inherit',
         },
         h4: {
-          color: 'var(--tw-prose-headings)',
+          color: 'var(--tw-format-headings)',
           fontWeight: '600',
         },
         'h4 strong': {
@@ -1352,17 +1005,17 @@ module.exports = {
         img: {},
         'figure > *': {},
         figcaption: {
-          color: 'var(--tw-prose-captions)',
+          color: 'var(--tw-format-captions)',
         },
         code: {
-          color: 'var(--tw-prose-code)',
+          color: 'var(--tw-format-code)',
           fontWeight: '600',
-        },
-        'code::before': {
-          content: '"`"',
-        },
-        'code::after': {
-          content: '"`"',
+          backgroundColor: 'var(--tw-format-code-bg)',
+          paddingTop: em(6, 18),
+          paddingBottom: em(6, 18),
+          paddingLeft: em(10, 18),
+          paddingRight: em(10, 18),
+          borderRadius: em(4, 18)
         },
         'a code': {
           color: 'inherit',
@@ -1386,8 +1039,8 @@ module.exports = {
           color: 'inherit',
         },
         pre: {
-          color: 'var(--tw-prose-pre-code)',
-          backgroundColor: 'var(--tw-prose-pre-bg)',
+          color: 'var(--tw-format-pre-code)',
+          backgroundColor: 'var(--tw-format-pre-bg)',
           overflowX: 'auto',
           fontWeight: '400',
         },
@@ -1416,17 +1069,18 @@ module.exports = {
           marginBottom: em(32, 16),
         },
         thead: {
-          borderBottomWidth: '1px',
-          borderBottomColor: 'var(--tw-prose-th-borders)',
+          backgroundColor: 'var(--tw-format-th-bg)',
+          borderRadius: em(5, 18),
         },
         'thead th': {
-          color: 'var(--tw-prose-headings)',
+          color: 'var(--tw-format-headings)',
           fontWeight: '600',
           verticalAlign: 'bottom',
+          padding: em(10, 18)
         },
         'tbody tr': {
           borderBottomWidth: '1px',
-          borderBottomColor: 'var(--tw-prose-td-borders)',
+          borderBottomColor: 'var(--tw-format-td-borders)',
         },
         'tbody tr:last-child': {
           borderBottomWidth: '0',
@@ -1436,7 +1090,7 @@ module.exports = {
         },
         tfoot: {
           borderTopWidth: '1px',
-          borderTopColor: 'var(--tw-prose-th-borders)',
+          borderTopColor: 'var(--tw-format-th-borders)',
         },
         'tfoot td': {
           verticalAlign: 'top',

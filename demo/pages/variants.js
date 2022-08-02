@@ -46,13 +46,13 @@ export default function Variants() {
               </div>
             </div>
             <div
-              className="prose
-            marker:prose-ol:text-red-500
+              className="format
+            marker:format-ol:text-red-500
 
-            prose-bullets:bg-red-500
-            marker:prose-ul:text-red-500
+            format-bullets:bg-red-500
+            marker:format-ul:text-red-500
 
-            prose-img:rounded-xl prose-img:shadow-xl prose-pre:bg-blue-900 prose-pre:text-pink-200 hover:prose-pre:font-bold prose-headings:text-pink-800 sm:prose-base md:prose-invert lg:prose-slate"
+            format-img:rounded-xl format-img:shadow-xl format-pre:bg-blue-900 format-pre:text-pink-200 hover:format-pre:font-bold format-headings:text-pink-800 sm:format-base md:format-invert lg:format-slate"
             >
               <MarkdownSampleShort />
             </div>

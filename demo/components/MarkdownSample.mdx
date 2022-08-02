@@ -1,35 +1,122 @@
+# Best practices for successful prototypes
+
 <p className="lead">
-  Until now, trying to style an article, document, or blog post with Tailwind has been a tedious
-  task that required a keen eye for typography and a lot of complex custom CSS.
+  Flowbite is an open-source library of web components built with the utility-first classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals, datepickers.
 </p>
 
-By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you _really are_ just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.
+Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way, you can think things through before committing to an actual design project.
 
-We get lots of complaints about it actually, with people regularly asking us things like:
+But then I found a [component library based on Tailwind CSS called Flowbite](https://flowbite.com). It comes with the most commonly used web components, such as buttons, navigation bars, cards, form elements, and more which are conveniently built with the utility classes from Tailwind CSS.
 
-> Why is Tailwind removing the default styles on my `h1` elements? How do I disable this? What do you mean I lose all the other base styles too?
+<figure>
+  <img
+    src="https://flowbite.s3.amazonaws.com/typography-plugin/typography-image-1.png"
+    alt=""
+  />
+  <figcaption>
+    Digital art by Anonymous
+  </figcaption>
+</figure>
 
-We hear you, but we're not convinced that simply disabling our base styles is what you really want. You don't want to have to remove annoying margins every time you use a `p` element in a piece of your dashboard UI. And I doubt you really want your blog posts to use the user-agent styles either — you want them to look _awesome_, not awful.
+## Getting started with Flowbite
 
-The `@tailwindcss/typography` plugin is our attempt to give you what you _actually_ want, without any of the downsides of doing something stupid like disabling our base styles.
+First of all you need to understand how Flowbite works. This library is not another framework. Rather, it is a set of components based on Tailwind CSS that you can just copy-paste from the documentation.
 
-It adds a new `prose` class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:
+It also includes a JavaScript file that enables interactive components, such as modals, dropdowns, and datepickers which you can optionally include into your project via CDN or NPM.
+
+You can check out the [quickstart guide](https://flowbite.com/docs/getting-started/quickstart/) to explore the elements by including the CDN files into your project. But if you want to build a project with Flowbite I recommend you to follow the build tools steps so that you can purge and minify the generated CSS.
+
+You'll also receive a lot of useful application UI, marketing UI, and e-commerce pages that can help you get started with your projects even faster. You can check out this [comparison table](https://flowbite.com/docs/components/tables/) to better understand the differences between the open-source and pro version of Flowbite.
+
+## When does design come in handy?
+
+While it might seem like extra work at a first glance, here are some key moments in which prototyping will come in handy:
+
+1. **Usability testing**. Does your user know how to exit out of screens? Can they follow your intended user journey and buy something from the site you’ve designed? By running a usability test, you’ll be able to see how users will interact with your design once it’s live;
+2. **Involving stakeholders**. Need to check if your GDPR consent boxes are displaying properly? Pass your prototype to your data protection team and they can test it for real;
+3. **Impressing a client**. Prototypes can help explain or even sell your idea by providing your client with a hands-on experience;
+4. **Communicating your vision**. By using an interactive medium to preview and test design elements, designers and developers can understand each other — and the project — better.
+
+### Laying the groundwork for best design
+
+Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way, you can think things through before committing to an actual design project.
+
+Let's start by including the CSS file inside the `head` tag of your HTML.
+
+### Understanding typography
+
+#### Type properties
+
+A typeface is a collection of letters. While each letter is unique, certain shapes are shared across letters. A typeface represents shared patterns across a collection of letters.
+
+#### Baseline
+
+A typeface is a collection of letters. While each letter is unique, certain shapes are shared across letters. A typeface represents shared patterns across a collection of letters.
+
+#### Measurement from the baseline
+
+A typeface is a collection of letters. While each letter is unique, certain shapes are shared across letters. A typeface represents shared patterns across a collection of letters.
+
+### Type classification
+
+#### Serif
+
+A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter. Typefaces with serifs are called serif typefaces. Serif fonts are classified as one of the following:
+
+#### Old-Style serifs
+
+- Low contrast between thick and thin strokes
+- Diagonal stress in the strokes
+- Slanted serifs on lower-case ascenders
+
+<img
+  src="https://flowbite.s3.amazonaws.com/typography-plugin/typography-image-2.png"
+  alt=""
+/>
+
+1. Low contrast between thick and thin strokes
+2. Diagonal stress in the strokes
+3. Slanted serifs on lower-case ascenders
+
+### Laying the best for successful prototyping
+
+A serif is a small shape or projection that appears at the beginning:
+
+> Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.
+
+#### Code example
+
+A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter. Typefaces with serifs are called serif typefaces. Serif fonts are classified as one of the following:
 
 ```html
-<article class="prose">
-  <h1>Garlic bread with cheese: What the science tells us</h1>
-  <p>
-    For years parents have espoused the health benefits of eating garlic bread with cheese to their
-    children, with the food earning such an iconic status in our culture that kids will often dress
-    up as warm, cheesy loaf for Halloween.
-  </p>
-  <p>
-    But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
-    springing up around the country.
-  </p>
-  <!-- ... -->
-</article>
+<dl class="grid grid-cols-2 gap-8 max-w-screen-md text-gray-900 sm:grid-cols-3 dark:text-white">
+    <div class="flex flex-col justify-center items-center">
+        <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
+        <dd class="text-lg font-normal text-gray-500 dark:text-gray-400">developers</dd>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+        <dt class="mb-2 text-3xl font-extrabold">1B+</dt>
+        <dd class="text-lg font-normal text-gray-500 dark:text-gray-400">contributors</dd>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+        <dt class="mb-2 text-3xl font-extrabold">4M+</dt>
+        <dd class="text-lg font-normal text-gray-500 dark:text-gray-400">organizations</dd>
+    </div>
+</dl>
 ```
+
+#### Table example
+
+A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
+
+| Country                | Date & Time       | Amount           |
+| ----------------------- | ------------ | ------------------ |
+| United States  | April 21, 2021  | **$2,300**       |
+| Canada | May 31, 2021   | **$300** |
+| United Kingdom            | June 3, 2021 | **$2,500**         |
+| Australia                   | June 23, 2021  | **$3,543**         |
+| Germany             | July 6, 2021 | **$99**       |
+| France             | August 23, 2021 | **$2,540**       |
 
 For more information about how to use the plugin and the features it includes, [read the documentation](https://github.com/tailwindcss/typography/blob/master/README.md).
 

@@ -8,7 +8,7 @@ export default function Index() {
         <title>Tailwind CSS Typography</title>
       </Head>
       <div className="relative">
-        <div className="absolute inset-0 flex prose prose-sm opacity-0">
+        <div className="absolute inset-0 flex format format-sm opacity-0">
           <div className="border-l border-red-200" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
@@ -18,8 +18,8 @@ export default function Index() {
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
         </div>
-        <div className="relative prose prose-sm">
-          <h3>prose-sm</h3>
+        <div className="relative format format-sm">
+          <h3>format-sm</h3>
           <p>It's important to cover all of these use cases for a few reasons:</p>
           <ol>
             <li>We want everything to look good out of the box.</li>
@@ -40,7 +40,7 @@ export default function Index() {
         </div>
       </div>
       <div className="relative">
-        <div className="absolute inset-0 flex prose prose-base opacity-0">
+        <div className="absolute inset-0 flex format format-base opacity-0">
           <div className="border-l border-red-200" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
@@ -50,8 +50,8 @@ export default function Index() {
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
         </div>
-        <div className="relative prose prose-base">
-          <h3>prose-base</h3>
+        <div className="relative format format-base">
+          <h3>format-base</h3>
           <p>It's important to cover all of these use cases for a few reasons:</p>
           <ol>
             <li>We want everything to look good out of the box.</li>
@@ -72,7 +72,7 @@ export default function Index() {
         </div>
       </div>
       <div className="relative">
-        <div className="absolute inset-0 flex prose prose-lg opacity-0">
+        <div className="absolute inset-0 flex format format-lg opacity-0">
           <div className="border-l border-red-200" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
@@ -82,8 +82,8 @@ export default function Index() {
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
         </div>
-        <div className="relative prose prose-lg">
-          <h3>prose-lg</h3>
+        <div className="relative format format-lg">
+          <h3>format-lg</h3>
           <p>It's important to cover all of these use cases for a few reasons:</p>
           <ol>
             <li>We want everything to look good out of the box.</li>
@@ -104,7 +104,7 @@ export default function Index() {
         </div>
       </div>
       <div className="relative">
-        <div className="absolute inset-0 flex prose prose-xl opacity-0">
+        <div className="absolute inset-0 flex format format-xl opacity-0">
           <div className="border-l border-red-200" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
@@ -114,8 +114,8 @@ export default function Index() {
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
         </div>
-        <div className="relative prose prose-xl">
-          <h3>prose-xl</h3>
+        <div className="relative format format-xl">
+          <h3>format-xl</h3>
           <p>It's important to cover all of these use cases for a few reasons:</p>
           <ol>
             <li>We want everything to look good out of the box.</li>
@@ -136,7 +136,7 @@ export default function Index() {
         </div>
       </div>
       <div className="relative">
-        <div className="absolute inset-0 flex prose prose-2xl opacity-0">
+        <div className="absolute inset-0 flex format format-2xl opacity-0">
           <div className="border-l border-red-200" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
@@ -146,8 +146,8 @@ export default function Index() {
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
           <div className="border-l border-red-100" style={{ width: '1em' }}></div>
         </div>
-        <div className="relative prose prose-2xl">
-          <h3>prose-2xl</h3>
+        <div className="relative format format-2xl">
+          <h3>format-2xl</h3>
           <p>It's important to cover all of these use cases for a few reasons:</p>
           <ol>
             <li>We want everything to look good out of the box.</li>

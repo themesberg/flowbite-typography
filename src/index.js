@@ -80,7 +80,7 @@ function configToCss(config = {}, { target, className, prefix }) {
 }
 
 module.exports = plugin.withOptions(
-  ({ className = 'prose', target = 'modern' } = {}) => {
+  ({ className = 'format', target = 'modern' } = {}) => {
     return function ({ addVariant, addComponents, theme, prefix }) {
       let modifiers = theme('typography')
 

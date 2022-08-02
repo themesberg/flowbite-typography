@@ -72,19 +72,19 @@ function run(config, plugin = tailwind) {
 
 test('specificity is reduced with :where', async () => {
   let config = {
-    content: [{ raw: html`<div class="prose"></div>` }],
+    content: [{ raw: html`<div class="format"></div>` }],
     theme: {
       typography: {
         DEFAULT: {
           css: [
             {
-              color: 'var(--tw-prose-body)',
+              color: 'var(--tw-format-body)',
               maxWidth: '65ch',
               '[class~="lead"]': {
-                color: 'var(--tw-prose-lead)',
+                color: 'var(--tw-format-lead)',
               },
               strong: {
-                color: 'var(--tw-prose-bold)',
+                color: 'var(--tw-format-bold)',
                 fontWeight: '600',
               },
               'ol[type="A"]': {
@@ -104,7 +104,7 @@ test('specificity is reduced with :where', async () => {
               },
               'ol > li::marker': {
                 fontWeight: '400',
-                color: 'var(--tw-prose-counters)',
+                color: 'var(--tw-format-counters)',
               },
               '> ul > li p': {
                 marginTop: '16px',
@@ -128,44 +128,44 @@ test('specificity is reduced with :where', async () => {
       css`
         ${defaults}
 
-        .prose {
-          color: var(--tw-prose-body);
+        .format {
+          color: var(--tw-format-body);
           max-width: 65ch;
         }
-        .prose :where([class~='lead']):not(:where([class~='not-prose'] *)) {
-          color: var(--tw-prose-lead);
+        .format :where([class~='lead']):not(:where([class~='not-format'] *)) {
+          color: var(--tw-format-lead);
         }
-        .prose :where(strong):not(:where([class~='not-prose'] *)) {
-          color: var(--tw-prose-bold);
+        .format :where(strong):not(:where([class~='not-format'] *)) {
+          color: var(--tw-format-bold);
           font-weight: 600;
         }
-        .prose :where(ol[type='A']):not(:where([class~='not-prose'] *)) {
+        .format :where(ol[type='A']):not(:where([class~='not-format'] *)) {
           list-style-type: upper-alpha;
         }
-        .prose :where(blockquote p:first-of-type):not(:where([class~='not-prose'] *))::before {
+        .format :where(blockquote p:first-of-type):not(:where([class~='not-format'] *))::before {
           content: open-quote;
         }
-        .prose :where(blockquote p:last-of-type):not(:where([class~='not-prose'] *))::after {
+        .format :where(blockquote p:last-of-type):not(:where([class~='not-format'] *))::after {
           content: close-quote;
         }
-        .prose :where(h4 strong):not(:where([class~='not-prose'] *)) {
+        .format :where(h4 strong):not(:where([class~='not-format'] *)) {
           font-weight: 700;
         }
-        .prose :where(figure > *):not(:where([class~='not-prose'] *)) {
+        .format :where(figure > *):not(:where([class~='not-format'] *)) {
           margin: 0;
         }
-        .prose :where(ol > li):not(:where([class~='not-prose'] *))::marker {
+        .format :where(ol > li):not(:where([class~='not-format'] *))::marker {
           font-weight: 400;
-          color: var(--tw-prose-counters);
+          color: var(--tw-format-counters);
         }
-        .prose :where(.prose > ul > li p):not(:where([class~='not-prose'] *)) {
+        .format :where(.format > ul > li p):not(:where([class~='not-format'] *)) {
           margin-top: 16px;
           margin-bottom: 16px;
         }
-        .prose :where(code):not(:where([class~='not-prose'] *))::before {
+        .format :where(code):not(:where([class~='not-format'] *))::before {
           content: '&#96;';
         }
-        .prose :where(code):not(:where([class~='not-prose'] *))::after {
+        .format :where(code):not(:where([class~='not-format'] *))::after {
           content: '&#96;';
         }
       `
@@ -175,19 +175,19 @@ test('specificity is reduced with :where', async () => {
 
 test('modifiers', async () => {
   let config = {
-    content: [{ raw: html`<div class="prose prose-lg"></div>` }],
+    content: [{ raw: html`<div class="format format-lg"></div>` }],
     theme: {
       typography: {
         DEFAULT: {
           css: [
             {
-              color: 'var(--tw-prose-body)',
+              color: 'var(--tw-format-body)',
               maxWidth: '65ch',
               '[class~="lead"]': {
-                color: 'var(--tw-prose-lead)',
+                color: 'var(--tw-format-lead)',
               },
               strong: {
-                color: 'var(--tw-prose-bold)',
+                color: 'var(--tw-format-bold)',
                 fontWeight: '600',
               },
               'ol[type="A"]': {
@@ -207,7 +207,7 @@ test('modifiers', async () => {
               },
               'ol > li::marker': {
                 fontWeight: '400',
-                color: 'var(--tw-prose-counters)',
+                color: 'var(--tw-format-counters)',
               },
               'code::before': {
                 content: '"&#96;"',
@@ -261,68 +261,68 @@ test('modifiers', async () => {
       css`
         ${defaults}
 
-        .prose {
-          color: var(--tw-prose-body);
+        .format {
+          color: var(--tw-format-body);
           max-width: 65ch;
         }
-        .prose :where([class~='lead']):not(:where([class~='not-prose'] *)) {
-          color: var(--tw-prose-lead);
+        .format :where([class~='lead']):not(:where([class~='not-format'] *)) {
+          color: var(--tw-format-lead);
         }
-        .prose :where(strong):not(:where([class~='not-prose'] *)) {
-          color: var(--tw-prose-bold);
+        .format :where(strong):not(:where([class~='not-format'] *)) {
+          color: var(--tw-format-bold);
           font-weight: 600;
         }
-        .prose :where(ol[type='A']):not(:where([class~='not-prose'] *)) {
+        .format :where(ol[type='A']):not(:where([class~='not-format'] *)) {
           list-style-type: upper-alpha;
         }
-        .prose :where(blockquote p:first-of-type):not(:where([class~='not-prose'] *))::before {
+        .format :where(blockquote p:first-of-type):not(:where([class~='not-format'] *))::before {
           content: open-quote;
         }
-        .prose :where(blockquote p:last-of-type):not(:where([class~='not-prose'] *))::after {
+        .format :where(blockquote p:last-of-type):not(:where([class~='not-format'] *))::after {
           content: close-quote;
         }
-        .prose :where(h4 strong):not(:where([class~='not-prose'] *)) {
+        .format :where(h4 strong):not(:where([class~='not-format'] *)) {
           font-weight: 700;
         }
-        .prose :where(figure > *):not(:where([class~='not-prose'] *)) {
+        .format :where(figure > *):not(:where([class~='not-format'] *)) {
           margin: 0;
         }
-        .prose :where(ol > li):not(:where([class~='not-prose'] *))::marker {
+        .format :where(ol > li):not(:where([class~='not-format'] *))::marker {
           font-weight: 400;
-          color: var(--tw-prose-counters);
+          color: var(--tw-format-counters);
         }
-        .prose :where(code):not(:where([class~='not-prose'] *))::before {
+        .format :where(code):not(:where([class~='not-format'] *))::before {
           content: '&#96;';
         }
-        .prose :where(code):not(:where([class~='not-prose'] *))::after {
+        .format :where(code):not(:where([class~='not-format'] *))::after {
           content: '&#96;';
         }
-        .prose-lg {
+        .format-lg {
           font-size: 18px;
           line-height: 1.75;
         }
-        .prose-lg :where(p):not(:where([class~='not-prose'] *)) {
+        .format-lg :where(p):not(:where([class~='not-format'] *)) {
           margin-top: 24px;
           margin-bottom: 24px;
         }
-        .prose-lg :where([class~='lead']):not(:where([class~='not-prose'] *)) {
+        .format-lg :where([class~='lead']):not(:where([class~='not-format'] *)) {
           font-size: 22px;
         }
-        .prose-lg :where(blockquote):not(:where([class~='not-prose'] *)) {
+        .format-lg :where(blockquote):not(:where([class~='not-format'] *)) {
           margin-top: 40px;
           margin-bottom: 40px;
         }
-        .prose-lg :where(h1):not(:where([class~='not-prose'] *)) {
+        .format-lg :where(h1):not(:where([class~='not-format'] *)) {
           font-size: 48px;
           margin-top: 0;
           margin-bottom: 40px;
         }
-        .prose-lg :where(h2):not(:where([class~='not-prose'] *)) {
+        .format-lg :where(h2):not(:where([class~='not-format'] *)) {
           font-size: 30px;
           margin-top: 56px;
           margin-bottom: 32px;
         }
-        .prose-lg :where(h3):not(:where([class~='not-prose'] *)) {
+        .format-lg :where(h3):not(:where([class~='not-format'] *)) {
           font-size: 24px;
           margin-top: 40px;
           margin-bottom: 16px;
@@ -335,19 +335,19 @@ test('modifiers', async () => {
 test('legacy target', async () => {
   let config = {
     plugins: [typographyPlugin({ target: 'legacy' })],
-    content: [{ raw: html`<div class="prose prose-h1:text-center prose-headings:text-ellipsis"></div>` }],
+    content: [{ raw: html`<div class="format format-h1:text-center format-headings:text-ellipsis"></div>` }],
     theme: {
       typography: {
         DEFAULT: {
           css: [
             {
-              color: 'var(--tw-prose-body)',
+              color: 'var(--tw-format-body)',
               maxWidth: '65ch',
               '[class~="lead"]': {
-                color: 'var(--tw-prose-lead)',
+                color: 'var(--tw-format-lead)',
               },
               strong: {
-                color: 'var(--tw-prose-bold)',
+                color: 'var(--tw-format-bold)',
                 fontWeight: '600',
               },
               'ol[type="A"]': {
@@ -367,7 +367,7 @@ test('legacy target', async () => {
               },
               'ol > li::marker': {
                 fontWeight: '400',
-                color: 'var(--tw-prose-counters)',
+                color: 'var(--tw-format-counters)',
               },
               'code::before': {
                 content: '"&#96;"',
@@ -387,64 +387,64 @@ test('legacy target', async () => {
       css`
         ${defaults}
 
-        .prose {
-          color: var(--tw-prose-body);
+        .format {
+          color: var(--tw-format-body);
           max-width: 65ch;
         }
-        .prose [class~='lead'] {
-          color: var(--tw-prose-lead);
+        .format [class~='lead'] {
+          color: var(--tw-format-lead);
         }
-        .prose strong {
-          color: var(--tw-prose-bold);
+        .format strong {
+          color: var(--tw-format-bold);
           font-weight: 600;
         }
-        .prose ol[type='A'] {
+        .format ol[type='A'] {
           list-style-type: upper-alpha;
         }
-        .prose blockquote p:first-of-type::before {
+        .format blockquote p:first-of-type::before {
           content: open-quote;
         }
-        .prose blockquote p:last-of-type::after {
+        .format blockquote p:last-of-type::after {
           content: close-quote;
         }
-        .prose h4 strong {
+        .format h4 strong {
           font-weight: 700;
         }
-        .prose figure > * {
+        .format figure > * {
           margin: 0;
         }
-        .prose ol > li::marker {
+        .format ol > li::marker {
           font-weight: 400;
-          color: var(--tw-prose-counters);
+          color: var(--tw-format-counters);
         }
-        .prose code::before {
+        .format code::before {
           content: '&#96;';
         }
-        .prose code::after {
+        .format code::after {
           content: '&#96;';
         }
-        .prose-headings\:text-ellipsis h1 {
+        .format-headings\:text-ellipsis h1 {
           text-overflow: ellipsis;
         }
-        .prose-headings\:text-ellipsis h2 {
+        .format-headings\:text-ellipsis h2 {
           text-overflow: ellipsis;
         }
-        .prose-headings\:text-ellipsis h3 {
+        .format-headings\:text-ellipsis h3 {
           text-overflow: ellipsis;
         }
-        .prose-headings\:text-ellipsis h4 {
+        .format-headings\:text-ellipsis h4 {
           text-overflow: ellipsis;
         }
-        .prose-headings\:text-ellipsis h5 {
+        .format-headings\:text-ellipsis h5 {
           text-overflow: ellipsis;
         }
-        .prose-headings\:text-ellipsis h6 {
+        .format-headings\:text-ellipsis h6 {
           text-overflow: ellipsis;
         }
-        .prose-headings\:text-ellipsis th {
+        .format-headings\:text-ellipsis th {
           text-overflow: ellipsis;
         }
-        .prose-h1\:text-center h1 {
+        .format-h1\:text-center h1 {
           text-align: center;
         }
       `
@@ -461,13 +461,13 @@ test('custom class name', async () => {
         DEFAULT: {
           css: [
             {
-              color: 'var(--tw-prose-body)',
+              color: 'var(--tw-format-body)',
               maxWidth: '65ch',
               '[class~="lead"]': {
-                color: 'var(--tw-prose-lead)',
+                color: 'var(--tw-format-lead)',
               },
               strong: {
-                color: 'var(--tw-prose-bold)',
+                color: 'var(--tw-format-bold)',
                 fontWeight: '600',
               },
               'ol[type="A"]': {
@@ -487,7 +487,7 @@ test('custom class name', async () => {
               },
               'ol > li::marker': {
                 fontWeight: '400',
-                color: 'var(--tw-prose-counters)',
+                color: 'var(--tw-format-counters)',
               },
               'code::before': {
                 content: '"&#96;"',
@@ -508,14 +508,14 @@ test('custom class name', async () => {
         ${defaults}
 
         .markdown {
-          color: var(--tw-prose-body);
+          color: var(--tw-format-body);
           max-width: 65ch;
         }
         .markdown :where([class~='lead']):not(:where([class~='not-markdown'] *)) {
-          color: var(--tw-prose-lead);
+          color: var(--tw-format-lead);
         }
         .markdown :where(strong):not(:where([class~='not-markdown'] *)) {
-          color: var(--tw-prose-bold);
+          color: var(--tw-format-bold);
           font-weight: 600;
         }
         .markdown :where(ol[type='A']):not(:where([class~='not-markdown'] *)) {
@@ -536,7 +536,7 @@ test('custom class name', async () => {
         }
         .markdown :where(ol > li):not(:where([class~='not-markdown'] *))::marker {
           font-weight: 400;
-          color: var(--tw-prose-counters);
+          color: var(--tw-format-counters);
         }
         .markdown :where(code):not(:where([class~='not-markdown'] *))::before {
           content: '&#96;';
@@ -555,33 +555,33 @@ test('element variants', async () => {
       {
         raw: html`<div
           class="
-            prose
-            prose-headings:underline
-            prose-lead:italic
-            prose-h1:text-3xl
-            prose-h2:text-2xl
-            prose-h3:text-xl
-            prose-h4:text-lg
-            prose-p:text-gray-700
-            prose-a:font-bold
-            prose-blockquote:italic
-            prose-figure:mx-auto
-            prose-figcaption:opacity-75
-            prose-strong:font-medium
-            prose-em:italic
-            prose-code:font-mono
-            prose-pre:font-mono
-            prose-ol:pl-6
-            prose-ul:pl-8
-            prose-li:my-4
-            prose-table:my-8
-            prose-thead:border-red-300
-            prose-tr:border-red-200
-            prose-th:text-left
-            prose-td:align-center
-            prose-img:rounded-lg
-            prose-video:my-12
-            prose-hr:border-t-2
+            format
+            format-headings:underline
+            format-lead:italic
+            format-h1:text-3xl
+            format-h2:text-2xl
+            format-h3:text-xl
+            format-h4:text-lg
+            format-p:text-gray-700
+            format-a:font-bold
+            format-blockquote:italic
+            format-figure:mx-auto
+            format-figcaption:opacity-75
+            format-strong:font-medium
+            format-em:italic
+            format-code:font-mono
+            format-pre:font-mono
+            format-ol:pl-6
+            format-ul:pl-8
+            format-li:my-4
+            format-table:my-8
+            format-thead:border-red-300
+            format-tr:border-red-200
+            format-th:text-left
+            format-td:align-center
+            format-img:rounded-lg
+            format-video:my-12
+            format-hr:border-t-2
         "
         ></div>`,
       },
@@ -591,12 +591,12 @@ test('element variants', async () => {
         DEFAULT: {
           css: [
             {
-              color: 'var(--tw-prose-body)',
+              color: 'var(--tw-format-body)',
               '[class~="lead"]': {
-                color: 'var(--tw-prose-lead)',
+                color: 'var(--tw-format-lead)',
               },
               strong: {
-                color: 'var(--tw-prose-bold)',
+                color: 'var(--tw-format-bold)',
                 fontWeight: '600',
               },
               'h4 strong': {
@@ -613,106 +613,106 @@ test('element variants', async () => {
       css`
         ${defaults}
 
-        .prose {
-          color: var(--tw-prose-body);
+        .format {
+          color: var(--tw-format-body);
         }
-        .prose :where([class~='lead']):not(:where([class~='not-prose'] *)) {
-          color: var(--tw-prose-lead);
+        .format :where([class~='lead']):not(:where([class~='not-format'] *)) {
+          color: var(--tw-format-lead);
         }
-        .prose :where(strong):not(:where([class~='not-prose'] *)) {
-          color: var(--tw-prose-bold);
+        .format :where(strong):not(:where([class~='not-format'] *)) {
+          color: var(--tw-format-bold);
           font-weight: 600;
         }
-        .prose :where(h4 strong):not(:where([class~='not-prose'] *)) {
+        .format :where(h4 strong):not(:where([class~='not-format'] *)) {
           font-weight: 700;
         }
-        .prose-headings\:underline
-          :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~='not-prose'] *))) {
+        .format-headings\:underline
+          :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~='not-format'] *))) {
           text-decoration-line: underline;
         }
-        .prose-h1\:text-3xl :is(:where(h1):not(:where([class~='not-prose'] *))) {
+        .format-h1\:text-3xl :is(:where(h1):not(:where([class~='not-format'] *))) {
           font-size: 1.875rem;
           line-height: 2.25rem;
         }
-        .prose-h2\:text-2xl :is(:where(h2):not(:where([class~='not-prose'] *))) {
+        .format-h2\:text-2xl :is(:where(h2):not(:where([class~='not-format'] *))) {
           font-size: 1.5rem;
           line-height: 2rem;
         }
-        .prose-h3\:text-xl :is(:where(h3):not(:where([class~='not-prose'] *))) {
+        .format-h3\:text-xl :is(:where(h3):not(:where([class~='not-format'] *))) {
           font-size: 1.25rem;
           line-height: 1.75rem;
         }
-        .prose-h4\:text-lg :is(:where(h4):not(:where([class~='not-prose'] *))) {
+        .format-h4\:text-lg :is(:where(h4):not(:where([class~='not-format'] *))) {
           font-size: 1.125rem;
           line-height: 1.75rem;
         }
-        .prose-p\:text-gray-700 :is(:where(p):not(:where([class~='not-prose'] *))) {
+        .format-p\:text-gray-700 :is(:where(p):not(:where([class~='not-format'] *))) {
           --tw-text-opacity: 1;
           color: rgb(55 65 81 / var(--tw-text-opacity));
         }
-        .prose-a\:font-bold :is(:where(a):not(:where([class~='not-prose'] *))) {
+        .format-a\:font-bold :is(:where(a):not(:where([class~='not-format'] *))) {
           font-weight: 700;
         }
-        .prose-blockquote\:italic :is(:where(blockquote):not(:where([class~='not-prose'] *))) {
+        .format-blockquote\:italic :is(:where(blockquote):not(:where([class~='not-format'] *))) {
           font-style: italic;
         }
-        .prose-figure\:mx-auto :is(:where(figure):not(:where([class~='not-prose'] *))) {
+        .format-figure\:mx-auto :is(:where(figure):not(:where([class~='not-format'] *))) {
           margin-left: auto;
           margin-right: auto;
         }
-        .prose-figcaption\:opacity-75 :is(:where(figcaption):not(:where([class~='not-prose'] *))) {
+        .format-figcaption\:opacity-75 :is(:where(figcaption):not(:where([class~='not-format'] *))) {
           opacity: 0.75;
         }
-        .prose-strong\:font-medium :is(:where(strong):not(:where([class~='not-prose'] *))) {
+        .format-strong\:font-medium :is(:where(strong):not(:where([class~='not-format'] *))) {
           font-weight: 500;
         }
-        .prose-em\:italic :is(:where(em):not(:where([class~='not-prose'] *))) {
+        .format-em\:italic :is(:where(em):not(:where([class~='not-format'] *))) {
           font-style: italic;
         }
-        .prose-code\:font-mono :is(:where(code):not(:where([class~='not-prose'] *))) {
+        .format-code\:font-mono :is(:where(code):not(:where([class~='not-format'] *))) {
           font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
             'Courier New', monospace;
         }
-        .prose-pre\:font-mono :is(:where(pre):not(:where([class~='not-prose'] *))) {
+        .format-pre\:font-mono :is(:where(pre):not(:where([class~='not-format'] *))) {
           font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
             'Courier New', monospace;
         }
-        .prose-ol\:pl-6 :is(:where(ol):not(:where([class~='not-prose'] *))) {
+        .format-ol\:pl-6 :is(:where(ol):not(:where([class~='not-format'] *))) {
           padding-left: 1.5rem;
         }
-        .prose-ul\:pl-8 :is(:where(ul):not(:where([class~='not-prose'] *))) {
+        .format-ul\:pl-8 :is(:where(ul):not(:where([class~='not-format'] *))) {
           padding-left: 2rem;
         }
-        .prose-li\:my-4 :is(:where(li):not(:where([class~='not-prose'] *))) {
+        .format-li\:my-4 :is(:where(li):not(:where([class~='not-format'] *))) {
           margin-top: 1rem;
           margin-bottom: 1rem;
         }
-        .prose-table\:my-8 :is(:where(table):not(:where([class~='not-prose'] *))) {
+        .format-table\:my-8 :is(:where(table):not(:where([class~='not-format'] *))) {
           margin-top: 2rem;
           margin-bottom: 2rem;
         }
-        .prose-thead\:border-red-300 :is(:where(thead):not(:where([class~='not-prose'] *))) {
+        .format-thead\:border-red-300 :is(:where(thead):not(:where([class~='not-format'] *))) {
           --tw-border-opacity: 1;
           border-color: rgb(252 165 165 / var(--tw-border-opacity));
         }
-        .prose-tr\:border-red-200 :is(:where(tr):not(:where([class~='not-prose'] *))) {
+        .format-tr\:border-red-200 :is(:where(tr):not(:where([class~='not-format'] *))) {
           --tw-border-opacity: 1;
           border-color: rgb(254 202 202 / var(--tw-border-opacity));
         }
-        .prose-th\:text-left :is(:where(th):not(:where([class~='not-prose'] *))) {
+        .format-th\:text-left :is(:where(th):not(:where([class~='not-format'] *))) {
           text-align: left;
         }
-        .prose-img\:rounded-lg :is(:where(img):not(:where([class~='not-prose'] *))) {
+        .format-img\:rounded-lg :is(:where(img):not(:where([class~='not-format'] *))) {
           border-radius: 0.5rem;
         }
-        .prose-video\:my-12 :is(:where(video):not(:where([class~='not-prose'] *))) {
+        .format-video\:my-12 :is(:where(video):not(:where([class~='not-format'] *))) {
           margin-top: 3rem;
           margin-bottom: 3rem;
         }
-        .prose-hr\:border-t-2 :is(:where(hr):not(:where([class~='not-prose'] *))) {
+        .format-hr\:border-t-2 :is(:where(hr):not(:where([class~='not-format'] *))) {
           border-top-width: 2px;
         }
-        .prose-lead\:italic :is(:where([class~="lead"]):not(:where([class~="not-prose"] *))) {
+        .format-lead\:italic :is(:where([class~="lead"]):not(:where([class~="not-format"] *))) {
           font-style: italic;
         }
       `
@@ -763,12 +763,12 @@ test('element variants with custom class name', async () => {
         DEFAULT: {
           css: [
             {
-              color: 'var(--tw-prose-body)',
+              color: 'var(--tw-format-body)',
               '[class~="lead"]': {
-                color: 'var(--tw-prose-lead)',
+                color: 'var(--tw-format-lead)',
               },
               strong: {
-                color: 'var(--tw-prose-bold)',
+                color: 'var(--tw-format-bold)',
                 fontWeight: '600',
               },
               'h4 strong': {
@@ -786,13 +786,13 @@ test('element variants with custom class name', async () => {
         ${defaults}
 
         .markdown {
-          color: var(--tw-prose-body);
+          color: var(--tw-format-body);
         }
         .markdown :where([class~='lead']):not(:where([class~='not-markdown'] *)) {
-          color: var(--tw-prose-lead);
+          color: var(--tw-format-lead);
         }
         .markdown :where(strong):not(:where([class~='not-markdown'] *)) {
-          color: var(--tw-prose-bold);
+          color: var(--tw-format-bold);
           font-weight: 600;
         }
         .markdown :where(h4 strong):not(:where([class~='not-markdown'] *)) {
@@ -899,7 +899,7 @@ test('customizing defaults with multiple values does not result in invalid css',
     plugins: [typographyPlugin()],
     content: [
       {
-        raw: html`<div class="prose"></div>`,
+        raw: html`<div class="format"></div>`,
       },
     ],
     theme: {
@@ -917,7 +917,7 @@ test('customizing defaults with multiple values does not result in invalid css',
       css`
         ${defaults}
 
-        .prose {
+        .format {
           text-align: -webkit-match-parent;
           text-align: match-parent;
         }
@@ -931,7 +931,7 @@ it('should be possible to use nested syntax (&) when extending the config', () =
     plugins: [typographyPlugin()],
     content: [
       {
-        raw: html`<div class="prose"></div>`,
+        raw: html`<div class="format"></div>`,
       },
     ],
     theme: {
@@ -955,14 +955,14 @@ it('should be possible to use nested syntax (&) when extending the config', () =
 
   return run(config).then((result) => {
     expect(result.css).toIncludeCss(css`
-      .prose {
+      .format {
         color: #000;
         max-width: 65ch;
       }
     `)
 
     expect(result.css).toIncludeCss(css`
-      .prose :where(a):not(:where([class~='not-prose'] *)) {
+      .format :where(a):not(:where([class~='not-format'] *)) {
         color: #888;
         text-decoration: underline;
         font-weight: 500;
@@ -970,7 +970,7 @@ it('should be possible to use nested syntax (&) when extending the config', () =
     `)
 
     expect(result.css).toIncludeCss(css`
-      .prose :where(a):not(:where([class~='not-prose'] *)):hover {
+      .format :where(a):not(:where([class~='not-format'] *)):hover {
         color: #ff0000;
       }
     `)
@@ -982,18 +982,18 @@ it('should be possible to specify custom h5 and h6 styles', () => {
     plugins: [typographyPlugin()],
     content: [
       {
-        raw: html`<div class="prose prose-h5:text-sm prose-h6:text-xl"></div>`,
+        raw: html`<div class="format format-h5:text-sm format-h6:text-xl"></div>`,
       },
     ],
   }
 
   return run(config).then((result) => {
     expect(result.css).toIncludeCss(css`
-      .prose-h5\:text-sm :is(:where(h5):not(:where([class~='not-prose'] *))) {
+      .format-h5\:text-sm :is(:where(h5):not(:where([class~='not-format'] *))) {
         font-size: 0.875rem;
         line-height: 1.25rem;
       }
-      .prose-h6\:text-xl :is(:where(h6):not(:where([class~='not-prose'] *))) {
+      .format-h6\:text-xl :is(:where(h6):not(:where([class~='not-format'] *))) {
         font-size: 1.25rem;
         line-height: 1.75rem;
       }
