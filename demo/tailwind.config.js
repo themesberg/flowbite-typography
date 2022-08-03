@@ -1,12 +1,17 @@
 const mdx = require('@mdx-js/mdx')
 
 module.exports = {
-  content: ['./demo/pages/**/*.{js,mdx}', './demo/components/**/*.{js,mdx}'],
+  content: ['./demo/pages/**/*.{js,mdx}', './demo/components/**/*.{js,mdx}', './demo/theme/**/*.js'],
   transform: {
     mdx: (content) => mdx.sync(content),
   },
+  darkMode: 'class',
   theme: {
     extend: {
+      maxWidth: {
+        '2xs': '16rem',
+        '8xl': '90rem'
+      },
       colors: {
         red: { 1000: '#530F0F' },
         orange: { 1000: '#521C0B' },

@@ -1,13 +1,13 @@
 {
-  "name": "@tailwindcss/typography",
-  "version": "0.5.4",
-  "description": "A Tailwind CSS plugin for automatically styling plain HTML content with beautiful typographic defaults.",
+  "name": "flowbite-typography",
+  "version": "1.0.1",
+  "description": "Flowbite Typography is a plugin that lets you apply styles to all inline typography styles forked from the official Tailwind CSS plugin.",
   "main": "src/index.js",
   "files": [
     "src/*.js",
     "dist/"
   ],
-  "repository": "https://github.com/tailwindcss/typography",
+  "repository": "https://github.com/themesberg/flowbite-typography",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -44,9 +44,12 @@
     "tailwindcss": "^3.0.0-alpha.2"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "i": "^0.3.7",
     "lodash.castarray": "^4.4.0",
     "lodash.isplainobject": "^4.0.6",
-    "lodash.merge": "^4.6.2"
+    "lodash.merge": "^4.6.2",
+    "npm": "^8.15.1"
   },
   "jest": {
     "setupFilesAfterEnv": [
