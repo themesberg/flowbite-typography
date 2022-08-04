@@ -21,8 +21,7 @@
   "scripts": {
     "test": "jest",
     "dev": "next dev demo",
-    "build": "next build demo",
-    "export": "next export demo",
+    "build": "next build",
     "start": "next start demo"
   },
   "peerDependencies": {
