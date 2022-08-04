@@ -50,7 +50,7 @@ export default function Index() {
                   </a>
                 </div>
               </div>
-              <div className="mx-auto max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+              <div className="mx-auto max-w-2xl format lg:format-lg format-blue dark:format-invert">
                 <MarkdownSample />
               </div>
             </div>
