@@ -13,7 +13,7 @@ export default function Banner() {
           <span className='bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 hidden md:inline'>
             New
           </span>
-          We have launched Flowbite Blocks featuring over 120+ website sections!
+          We have launched Flowbite Blocks featuring over 140+ website sections!
           <Link href={Routes.Blocks}>
             <a className='inline-flex items-center ml-2 text-sm font-medium text-blue-600 md:ml-2 dark:text-blue-500 hover:underline'>
               Check it out
