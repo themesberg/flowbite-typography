@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Routes from '../../routes'
+import Routes from '../routes'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()

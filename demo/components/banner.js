@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Routes from '../../routes'
+
+import Routes from '../routes'
 
 export default function Banner() {
   return (
