@@ -7,7 +7,7 @@ import MenuIcon from '@heroicons/react/outline/MenuIcon'
 
 import Routes from '../../routes'
 import ThemeToggleButton from '../theme/theme-toggle-button'
-// import { DocSearch } from '@docsearch/react'
+import { DocSearch } from '@docsearch/react'
 
 export default function Navbar(props) {
     const [nav, setNav] = useState(false)
@@ -66,11 +66,11 @@ export default function Navbar(props) {
                             </a>
                         </Link>
 
-                        {/* <DocSearch
-              appId='JUWZAHYJQ9'
-              indexName='flowbite'
-              apiKey='63250f7f96b4ea48c49dbd149aab687c'
-            /> */}
+                        <DocSearch
+                            appId='JUWZAHYJQ9'
+                            indexName='flowbite'
+                            apiKey='63250f7f96b4ea48c49dbd149aab687c'
+                        />
                     </div>
 
                     <div className='flex items-center lg:hidden'>

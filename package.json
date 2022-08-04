@@ -44,6 +44,7 @@
     "tailwindcss": "^3.0.0-alpha.2"
   },
   "dependencies": {
+    "@docsearch/react": "^3.2.0",
     "@heroicons/react": "^1.0.6",
     "i": "^0.3.7",
     "lodash.castarray": "^4.4.0",
