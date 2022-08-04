@@ -121,13 +121,6 @@ export default function Navbar(props) {
                                 </a>
                             </Link>
                         </li>
-                        <li>
-                            <Link href={`${Routes.ProDetails.Home}#pricing`}>
-                                <a className='block py-2 text-sm font-medium text-gray-900 lg:px-4 lg:py-0 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500'>
-                                    Pricing & FAQ
-                                </a>
-                            </Link>
-                        </li>
                     </ul>
                     <div
                         className={`lg:self-center flex items-center mb-4 lg:mb-0 collapse ${collapseClasses}`}>
@@ -169,6 +162,9 @@ export default function Navbar(props) {
                                 </svg>
                             </a>
                             <ThemeToggleButton />
+                            <Link href={`${Routes.ProDetails.Home}#pricing`}>
+                                <a className="hidden md:inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-3">Pricing &amp; FAQ</a>
+                            </Link>
                         </div>
                     </div>
                 </div>
