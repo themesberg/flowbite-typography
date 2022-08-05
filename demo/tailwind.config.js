@@ -1,7 +1,7 @@
 const mdx = require('@mdx-js/mdx')
 
 module.exports = {
-  content: ['pages/**/*.{js,mdx}', 'components/**/*.{js,mdx}', 'theme/**/*.js'],
+  content: ['./demo/pages/**/*.{js,mdx}', './demo/components/**/*.{js,mdx}', './demo/theme/**/*.js'],
   transform: {
     mdx: (content) => mdx.sync(content),
   },
