@@ -22,7 +22,6 @@
     "test": "jest",
     "dev": "next dev demo",
     "build": "next build demo",
-    "export": "next export demo",
     "start": "next start demo"
   },
   "peerDependencies": {
