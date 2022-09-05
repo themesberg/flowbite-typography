@@ -1,6 +1,6 @@
 {
   "name": "flowbite-typography",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Flowbite Typography is a plugin that lets you apply styles to all inline typography styles forked from the official Tailwind CSS plugin.",
   "main": "src/index.js",
   "files": [
