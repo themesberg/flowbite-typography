@@ -161,6 +161,9 @@ let defaultModifiers = {
           paddingBottom: em(8, 12),
           paddingLeft: em(12, 12),
         },
+        'tbody tr th p': {
+          margin: '0 !important',
+        },
         'thead th:first-child': {
           paddingLeft: '0',
         },
@@ -172,6 +175,9 @@ let defaultModifiers = {
           paddingRight: em(12, 12),
           paddingBottom: em(8, 12),
           paddingLeft: em(12, 12),
+        },
+        'tbody td p, tfoot td p': {
+          margin: '0 !important'
         },
         'tbody td:first-child, tfoot td:first-child': {
           paddingLeft: '0',
@@ -927,10 +933,24 @@ module.exports = {
           borderRadius: em(5, 18),
         },
         'thead th': {
+          backgroundColor: 'var(--tw-format-th-bg)',
           color: 'var(--tw-format-headings)',
           fontWeight: '600',
           verticalAlign: 'bottom',
           padding: em(10, 18)
+        },
+        'tbody th': {
+          backgroundColor: 'var(--tw-format-th-bg)',
+          color: 'var(--tw-format-headings)',
+          fontWeight: '600',
+          verticalAlign: 'bottom',
+          padding: em(10, 18)
+        },
+        'tbody tr th p, tbody tr td p': {
+          margin: '0 !important'
+        },
+        'tbody tr th, tbody tr td': {
+          padding: `${em(8, 12)} !important`
         },
         'tbody tr': {
           borderBottomWidth: '1px',

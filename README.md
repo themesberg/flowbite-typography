@@ -19,6 +19,7 @@ _Disclaimer: this plugin is a fork from the official [Tailwind CSS Typography Pl
 ## Documentation
 
 For full documentation, visit [flowbite.com](https://flowbite.com/docs/components/typography/).
+
 ## Getting started
 
 Flowbite Typography can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.
