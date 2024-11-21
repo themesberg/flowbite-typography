@@ -24,9 +24,6 @@
     "build": "next build demo",
     "start": "next start demo"
   },
-  "peerDependencies": {
-    "tailwindcss": ">=3.0.0 || insiders"
-  },
   "devDependencies": {
     "@mdx-js/loader": "^1.0.19",
     "@mdx-js/mdx": "^1.6.6",
