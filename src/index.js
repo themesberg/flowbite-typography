@@ -1,6 +1,5 @@
 const plugin = require('tailwindcss/plugin')
 const merge = require('lodash.merge')
-const castArray = require('lodash.castarray')
 const styles = require('./styles')
 
 const computed = {
@@ -73,7 +72,7 @@ function configToCss(config = {}, { target, className, prefix }) {
         ...Object.keys(config)
           .filter((key) => computed[key])
           .map((key) => computed[key](config[key])),
-        ...castArray(config.css || {})
+        ...[].concat(config.css || {})
       )
     ).map(([k, v]) => updateSelector(k, v))
   )
